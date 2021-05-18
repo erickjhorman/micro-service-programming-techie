@@ -1,11 +1,9 @@
 spring:
   datasource:
-
     url: jdbc:mysql://localhost:3306/order-service
     username: root
     password: mysql
     initialization-mode: always
-
   application:
     name: order-service
 server:
@@ -13,3 +11,7 @@ server:
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
+#create configuration to connect this microservice with config-server
+  cloud:
+    config:
+      uri: http://localhost:8888
