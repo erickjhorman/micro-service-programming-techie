@@ -4,7 +4,7 @@ spring:
       uri: mongodb://localhost:27017/product-service
   application:
     name: product-service
-#create configuration to connect this microservice with config-server
+  #create configuration to connect this microservice with config-server
   cloud:
     config:
       uri: http://localhost:8888
@@ -16,10 +16,10 @@ spring:
       token: ${VAULT-TOKEN}
       application-name: product-service
   rabbitmq:
-     host: localhost
-     port: 5672
-     username: guest
-     password: guest
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: 0
 eureka:
@@ -30,3 +30,9 @@ management:
     web:
       exposure:
         include: "*"
+
+  security:
+    oauth2:
+     resourceserver:
+       jwt:
+         issuer-uri: http://localhost:8080/auth/realms/microservices-project-realm
