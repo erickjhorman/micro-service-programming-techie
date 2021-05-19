@@ -8,6 +8,13 @@ spring:
   cloud:
     config:
       uri: http://localhost:8888
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      authentication: TOKEN
+      token: ${VAULT-TOKEN}
+      application-name: product-service
 server:
   port: 0
 eureka:

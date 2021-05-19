@@ -1,0 +1,12 @@
+#configuration for vault server
+spring:
+  cloud:
+   vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      authentication: TOKEN
+      token: ${VAULT-TOKEN}
+      application-name: order-service
+   config: #create configuration to connect this microservice with config-server
+      uri: http://localhost:8888
