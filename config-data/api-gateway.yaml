@@ -21,19 +21,15 @@ spring:
         enabled: false
   security:
     oauth2:
-     client:
-      provider:
-        keycloak:
-          issuer-uir: http://localhost:8080/auth/realms/microservices-project-realm
-      registration:
-        spring-cloud-gateway-client:
-          cliente-id: spring-cloud-gateway-client    
-        spring-cloud-gateway-client:
-          client-secret: 0e669d94-0f80-43bf-8011-64ecb515fdbb 
-        spring-cloud-gateway-client: 
-          provider: keycloak
-        spring-cloud-gateway-client:
-          authorization-grant-type: authorization-code 
-        spring-cloud-gateway-client:
-          redirect-uri: http://localhost:8081/login/oauth2/code/spring-cloud-gateway-client    
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/auth/realms/microservices-project-realm
+        registration:
+          spring-cloud-gateway-client:
+            client-id: spring-cloud-gateway-client
+            client-secret: 0e669d94-0f80-43bf-8011-64ecb515fdbb
+            provider: keycloak
+            authorization-grant-type: authorization-code
+            redirect-uri: http://localhost:8081/login/oauth2/code/spring-cloud-gateway-client
 
