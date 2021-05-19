@@ -1,0 +1,21 @@
+server:
+  port: 8080
+spring
+ cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/api/v1/product/**
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - Path=/api/v1/order/**
+    loadbalancer:
+      ribbon:
+        enabled: false
+
