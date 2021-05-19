@@ -11,7 +11,4 @@ server:
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
-#create configuration to connect this microservice with config-server
-  cloud:
-    config:
-      uri: http://localhost:8888
+
