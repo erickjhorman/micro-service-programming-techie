@@ -15,6 +15,11 @@ spring:
       authentication: TOKEN
       token: ${VAULT-TOKEN}
       application-name: product-service
+  rabbitmq:
+     host: localhost
+     port: 5672
+     username: guest
+     password: guest
 server:
   port: 0
 eureka:
