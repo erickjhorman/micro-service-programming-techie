@@ -16,7 +16,7 @@ spring:
           uri: lb://order-service
           predicates:
             - Path=/api/v1/order/**
-    default-filters: TokenRelay        
+      default-filters: TokenRelay     
     loadbalancer:
       ribbon:
        enabled: false
