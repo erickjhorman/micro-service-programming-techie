@@ -15,6 +15,11 @@ spring:
       authentication: TOKEN
       token: ${VAULT-TOKEN}
       application-name: product-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/microservices-project-realm
   rabbitmq:
     host: localhost
     port: 5672
@@ -30,9 +35,3 @@ management:
     web:
       exposure:
         include: "*"
-
-  security:
-    oauth2:
-     resourceserver:
-       jwt:
-         issuer-uri: http://localhost:8080/auth/realms/microservices-project-realm

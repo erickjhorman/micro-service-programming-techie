@@ -2,3 +2,15 @@ spring:
   cloud:
     config: #create configuration to connect this microservice with config-server
       uri: http://localhost:8888
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
