@@ -17,9 +17,9 @@ spring:
           predicates:
             - Path=/api/v1/order/**
     default-filters: TokenRelay        
-  loadbalancer:
-    ribbon:
-      enabled: false
+    loadbalancer:
+      ribbon:
+       enabled: false
   security:
     oauth2:
       client:
