@@ -33,4 +33,10 @@ spring:
             provider: keycloak
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8081/login/oauth2/code/spring-cloud-gateway-client
+      resourceserver:
+        jwt:
+         jwt-set-uri: http://localhost:8081/auth/realms/microservices-realm/protocol/openid-connect/certs
+
+
+            
 
