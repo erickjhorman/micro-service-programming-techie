@@ -10,6 +10,11 @@ spring:
       authentication: TOKEN
       token: ${VAULT-TOKEN}
       application-name: order-service
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/microservices-project-realm
   rabbitmq:
     host: localhost
     port: 5672

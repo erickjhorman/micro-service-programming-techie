@@ -1,2 +1,7 @@
 /vault/
 /api-gateway-service/
+/configuration-service/
+/discovery-service/
+/order-service/
+/product-service/
+/keyCloak/

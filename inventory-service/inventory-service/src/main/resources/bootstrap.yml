@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: inventory-service
+
+#create configuration to connect this microservice with config-server
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http
+      authentication: TOKEN
+      token: ${VAULT-TOKEN}
+      application-name: ${spring.application.name}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/auth/realms/microservices-project-realm
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+server:
+  port: 8183
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${random.uuid}
