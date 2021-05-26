@@ -1,7 +1,7 @@
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/order-service
+    url: jdbc:mysql://localhost/inventory-service?&zerodatetimebehavior=Converttonull&useSSL=false&serverTimezone=UTC&allowPublicKeyRetrival=true
   jpa:
    properties:
      hibernate:
