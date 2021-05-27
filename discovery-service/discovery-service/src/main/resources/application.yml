@@ -4,4 +4,10 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-
+  server:
+    expected-client-renewal-interval-seconds: 30
+    eviction-interval-timer-in-ms: 60000
+    lease-expiration-duration-in-seconds: 10
+    renewal-percent-threshold: 0.85
+    renewal-threshold-update-interval-ms: 900000
+    enable-self-preservation: true

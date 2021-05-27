@@ -1,27 +1,8 @@
 server:
   port: 8081
-
 spring:
   application:
     name: api-gateway
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: product-service
-          uri: lb://product-service
-          predicates:
-            - Path=/api/v1/product/**
-        - id: order-service
-          uri: lb://order-service
-          predicates:
-            - Path=/api/v1/order/**
-      default-filters: TokenRelay
-    loadbalancer:
-      ribbon:
-        enabled: false
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}

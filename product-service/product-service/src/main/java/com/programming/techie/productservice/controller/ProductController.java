@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @RequestMapping(ProductController.URL_BASE)
 public class ProductController {
-    public static final String URL_BASE = "/api/v1/product";
+    public static final String URL_BASE = "/api/v1/products";
     private final ProductService productService;
 
     @GetMapping
