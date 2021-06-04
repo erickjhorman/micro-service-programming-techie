@@ -3,6 +3,11 @@ spring:
   cloud:
     config: #create configuration to connect this microservice with config-server
       uri: http://localhost:8888
+    stream:
+      bindings:
+        notificationEventSupplier-out-0:
+          destination: notification-events
+      source: notificationEventSupplier
     vault:
       host: localhost
       port: 8200
