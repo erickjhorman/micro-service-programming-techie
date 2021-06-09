@@ -29,7 +29,7 @@ spring:
         registration:
           spring-cloud-gateway-client:
             client-id: spring-cloud-gateway-client
-            client-secret: 0e669d94-0f80-43bf-8011-64ecb515fdbb
+            client-secret: 3c15c5d0-e1fc-4bff-a8d6-438b5e4a321d
             provider: keycloak
             authorization-grant-type: authorization_code
             redirect-uri: http://localhost:8081/login/oauth2/code/spring-cloud-gateway-client
